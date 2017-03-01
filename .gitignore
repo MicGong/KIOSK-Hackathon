@@ -1,0 +1,4 @@
+*.pyc
+db.sqlite3
+/social_auth_drchrono/auth_config.py
+.DS_Store

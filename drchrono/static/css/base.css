@@ -1,0 +1,19 @@
+body {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.header,
+.footer {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.body-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

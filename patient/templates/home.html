@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block headblock %}
+{% load static %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-resource.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/patient-checkin.js' %}"></script>
+{% endblock %}
+{% block bodyblock %}
+    <div class="container" ng-app="PatientCheckin">
+        <div ng-view></div>
+    </div>
+{% endblock %}

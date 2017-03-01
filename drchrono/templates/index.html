@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block headblock %}    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block bodyblock %}
+    <div class="jumbotron">
+        <h2>Greetings</h2>
+        <p>Welcome to KIOSK patient checkin system</p>
+        <p>Please authenticate through drchrono to enable all features</p>
+        <a href="{% url 'social:begin' 'drchrono' %}" class="btn btn-primary">Login through drchrono</a>
+    </div>
+{% endblock %}

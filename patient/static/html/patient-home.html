@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Visit Purpose</h4>
+            </div>
+            <div class="panel-body">
+                <h3>Please select your purpose from one of the followings</h3>
+                <form>
+                    <div class="list-group">
+                        <div class="radio list-group-item" ng-repeat="purpose in purposes">
+                            <label>
+                                <input type="radio" name="purposesRadios" ng-model="radio.value" ng-value="{{purpose.value}}">{{purpose.name}}
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5">
+                <a ng-if="radio.value == 1" href="#/patient-info" class="btn btn-default" type="button">Next</a>
+                <a ng-if="radio.value == 2" href="#/" class="btn btn-default" type="button">Next</a>
+            </div>
+        </div>
+    </div>
+</div>

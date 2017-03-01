@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block headblock %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/login-redirect.css' %}">
+{% endblock %}
+{% block bodyblock %}
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Hello Dr.{{doc_username}}</h3>
+                    <h4>Do you want to</h4>
+                    <p><a class="btn btn-primary btn-sm" href="{% url 'patient:home' %}" role="button">Enable Patients Checkin</a></p>
+                    <p><a class="btn btn-primary btn-sm" href="{% url 'doctor:home' %}" role="button">Go to my home page</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

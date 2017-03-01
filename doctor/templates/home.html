@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block headblock %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+{% endblock %}
+{% block headerblock %}
+    <div class="dropdown pull-right">
+        <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user-circle-o fa-2x"></i>
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+            <li><a href="#">Info</a></li>
+            <li><a href="#">Log Out</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="https://drchrono.com">Go to drchrono.com</a></li>
+        </ul>
+    </div>
+{% endblock %}
+{% block bodyblock %}
+    <h3>Doctor home page</h3>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Appointments</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Appt Time</th>
+                                    <th>Duration</th>
+                                    <th>Patient First Name</th>
+                                    <th>Patient Last Name</th>
+                                    <th>Appt Info</th>
+                                    <th>Checked in</th>
+                                    <th>Wait Time</th>
+                                    <th>Operations</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-md-offset-1">
+                            <button class="btn btn-primary">New Appoinment</button>
+                        </div>
+                        <div class="col-md-5 col-md-offset-2">
+                            <div class="well well-sm">
+                                Average wait time for patien is <span>XXX</span> Mins <span>XX</span> Seconds
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
